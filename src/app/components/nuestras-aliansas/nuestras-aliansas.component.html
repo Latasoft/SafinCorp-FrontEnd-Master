@@ -1,0 +1,14 @@
+<div class="container mx-auto px-4 py-8">
+  <h2 class="text-3xl font-bold text-center mb-8">Nuestras Alianzas</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6" [@listAnimation]>
+    <div *ngFor="let alianza of alianzas" class="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+      <!-- Contenedor con relación de aspecto fija -->
+      <div class="aspect-video overflow-hidden">
+        <img [src]="alianza.logoUrl" [alt]="alianza.nombre" class="w-full h-full object-contain object-center">
+      </div>
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-2">{{ alianza.nombre }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,52 @@
+<section class="py-12 bg-gray-100">
+  <div class="max-w-6xl mx-auto px-4">
+    <header class="text-center mb-10">
+      <h1 class="text-4xl font-semibold text-gray-800">Galería de Eventos</h1>
+    </header>
+
+    <!-- Iterar sobre cada evento -->
+    <div *ngFor="let video of videos" class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-12">
+      <h2 class="text-center text-2xl uppercase font-bold text-gray-900 mb-2">{{ video.nombre }}</h2>
+      <p class="text-gray-700 text-center text-lg mb-6">{{ video.descripcion }}</p>
+
+      <div *ngIf="video.link && video.link.length > 0" class="flex justify-center mb-6">
+        <iframe 
+          [src]="video.link | safeUrl" 
+          class="w-full md:w-3/4 lg:w-2/3 h-80 rounded-lg shadow-md" 
+          frameborder="0" 
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div *ngIf="video.fotos && video.fotos.length > 0" class="mt-6">
+        <h3 class="text-center text-xl font-semibold text-gray-800 mb-4">Fotos</h3>
+        <div class="flex justify-center">
+          <swiper-container #swiper class="swiper-gallery w-full md:w-3/4 lg:w-2/3" navigation="true" pagination="true">
+            <swiper-slide *ngFor="let foto of video.fotos">
+              <img [src]="foto" alt="Foto del evento" class="w-full h-80 object-contain rounded-lg shadow-md">
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video fijo: Testimonio o evento especial -->
+    <div class="bg-white p-8 rounded-lg shadow-lg border border-gray-200 mb-12">
+      <h2 class="text-center text-2xl uppercase font-bold text-gray-900 mb-2">
+        Charla Seguros, Cómo prevenir el infraseguro y el siniestro 
+      </h2>
+      <p class="text-gray-700 text-center text-lg mb-6">
+       
+      </p>
+      <div class="flex justify-center mb-6">
+        <a href="https://www.youtube.com/watch?v=hvZr3cpeOoM" target="_blank" rel="noopener noreferrer" class="block w-full md:w-3/4 lg:w-2/3">
+          <img 
+            src="https://img.youtube.com/vi/hvZr3cpeOoM/hqdefault.jpg" 
+            alt="Miniatura del video" 
+            class="w-full h-80 object-cover rounded-lg shadow-md hover:opacity-90 transition-opacity duration-300">
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
