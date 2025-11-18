@@ -1,4 +1,7 @@
 import { Routes } from '@angular/router';
+
+//Cambiar rutas y mover directories de components a pages
+
 import { HomeComponent } from './pages/home/home.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { QuienesSomosComponent } from './components/quienes-somos/quienes-somos.component';
@@ -9,6 +12,7 @@ import { CondominiosComponent } from './pages/condominios/condominios.component'
 import { NuestrasAliansasComponent } from './components/nuestras-aliansas/nuestras-aliansas.component';
 import { PagarSeguroComponent } from './components/pagar-seguro/pagar-seguro.component';
 import { DenunciarSiniestroComponent } from './components/denunciar-siniestro/denunciar-siniestro.component';
+import { Resena } from './components/resena/resena';
 
 export const routes: Routes = [
     {
@@ -46,7 +50,7 @@ export const routes: Routes = [
         component:CondominiosComponent
     },
     {
-        path:'nuestras-aliansas',
+        path:'nuestras-alianzas',
         component:NuestrasAliansasComponent
     },
     {
@@ -62,5 +66,10 @@ export const routes: Routes = [
         path: '**',
         redirectTo: 'inicio', // Redirige a la ruta 'inicio'
         
+    },
+    {
+
+        path:'resenas',
+        component:Resena
     }
 ];
