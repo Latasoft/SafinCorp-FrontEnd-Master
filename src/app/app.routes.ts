@@ -63,13 +63,11 @@ export const routes: Routes = [
         component:DenunciarSiniestroComponent
     },
     {
-        path: '**',
-        redirectTo: 'inicio', // Redirige a la ruta 'inicio'
-        
-    },
-    {
-
         path:'resenas',
         component:Resena
+    },
+    {
+        path: '**',
+        redirectTo: 'inicio', // Redirige a la ruta 'inicio'
     }
 ];
