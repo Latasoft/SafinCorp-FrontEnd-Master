@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-interface ResenaItem {
+interface Resena {
   id: number;
   nombre: string;
   calificacion: number;
@@ -14,11 +14,11 @@ interface ResenaItem {
   selector: 'app-resena',
   standalone: true,
   imports: [CommonModule, FormsModule],
-  templateUrl: './resena.html',
-  styleUrl: './resena.css',
+  templateUrl: './resena.component.html',
+  styleUrl: './resena.component.css',
 })
-export class Resena {
-  resenas: ResenaItem[] = [
+export class ResenaComponent {
+  resenas: Resena[] = [
     {
       id: 1,
       nombre: 'Carla Mendoza',
@@ -66,7 +66,7 @@ export class Resena {
 
   enviarResena(): void {
     if (this.nombreUsuario.trim() && this.comentarioUsuario.trim() && this.calificacionUsuario > 0) {
-      const nuevaResena: ResenaItem = {
+      const nuevaResena: Resena = {
         id: this.resenas.length + 1,
         nombre: this.nombreUsuario,
         calificacion: this.calificacionUsuario,

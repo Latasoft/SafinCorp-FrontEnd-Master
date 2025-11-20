@@ -12,7 +12,7 @@ import { CondominiosComponent } from './pages/condominios/condominios.component'
 import { NuestrasAliansasComponent } from './components/nuestras-aliansas/nuestras-aliansas.component';
 import { PagarSeguroComponent } from './components/pagar-seguro/pagar-seguro.component';
 import { DenunciarSiniestroComponent } from './components/denunciar-siniestro/denunciar-siniestro.component';
-import { Resena } from './components/resena/resena';
+import { ResenaComponent } from './components/resena/resena.component';
 
 export const routes: Routes = [
     {
@@ -64,7 +64,7 @@ export const routes: Routes = [
     },
     {
         path:'resenas',
-        component:Resena
+        component:ResenaComponent
     },
     {
         path: '**',

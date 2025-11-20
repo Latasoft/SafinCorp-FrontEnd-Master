@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Resena } from './resena';
+import { ResenaComponent } from './resena.component';
 
 describe('Resena', () => {
-  let component: Resena;
-  let fixture: ComponentFixture<Resena>;
+  let component: ResenaComponent;
+  let fixture: ComponentFixture<ResenaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Resena]
+      imports: [ResenaComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Resena);
+    fixture = TestBed.createComponent(ResenaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
