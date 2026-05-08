@@ -18,6 +18,7 @@ export class CondominiosComponent {
   fotos=[
     'assets/img/condominios/condominio.webp',
     'assets/img/condominios/condominio2.webp'  
+    'assets/img/condominios/checklist-safincorp.webp'
   ]
    @ViewChild('swiper') swiper!: ElementRef;
     swiperInstance: any;
